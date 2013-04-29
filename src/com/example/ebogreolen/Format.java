@@ -1,3 +1,5 @@
+package com.example.ebogreolen;
+
 public enum Format {
 	FORMAT_EPUB("EPUB"), FORMAT_PDF("PDF");
 

@@ -1,4 +1,4 @@
-package dk.ebogreolen;
+package com.example.ebogreolen;
 
 import java.util.ArrayList;
 

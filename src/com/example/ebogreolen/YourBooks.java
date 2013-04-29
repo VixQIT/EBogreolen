@@ -11,6 +11,7 @@ public class YourBooks extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_books);
         View rowOne = findViewById(R.id.tableRow1);
+        rowOne.bringToFront();
     }
     
 }

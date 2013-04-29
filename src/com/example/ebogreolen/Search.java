@@ -1,3 +1,5 @@
+package com.example.ebogreolen;
+
 import java.util.ArrayList;
 
 public class Search {

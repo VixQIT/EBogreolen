@@ -1,3 +1,5 @@
+package com.example.ebogreolen;
+
 import java.util.ArrayList;
 
 public class WebAPIIO {
@@ -24,11 +26,12 @@ public class WebAPIIO {
 		return null;
 	}
 
+	/*
 	public Protection getProtection(int iSBN) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+*/
 	public Format getFormat(int iSBN) {
 		// TODO Auto-generated method stub
 		return null;

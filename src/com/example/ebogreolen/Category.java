@@ -1,10 +1,12 @@
+package com.example.ebogreolen;
+
 import java.util.ArrayList;
 
 public class Category {
 
 	private String name;
-	private ArrayList bookList = new ArrayList();
-	private ArrayList categoryList = new ArrayList();
+	private ArrayList<Book> bookList = new ArrayList<Book>();
+	private ArrayList<Category> categoryList = new ArrayList<Category>();
 	private boolean isSuperCategory;
 
 	public Category(String name, ArrayList<Book> bookList,

@@ -1,3 +1,5 @@
+package com.example.ebogreolen;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,8 +24,8 @@ public class Book {
 	private Date releaseDate;
 	private String author;
 	private Format format;
-	private Protection protection;
-	private boolean isDownloaded = false;
+	// private Protection protection;
+	public boolean isDownloaded = false;
 
 	//
 	// Constructors
@@ -35,17 +37,22 @@ public class Book {
 		this.releaseDate = WebAPIIO.instance.getBookReleaseDate(iSBN);
 		this.author = WebAPIIO.instance.getAuthorName(iSBN);
 		this.format = WebAPIIO.instance.getFormat(iSBN);
-		this.protection = WebAPIIO.instance.getProtection(iSBN);
+		// this.protection = WebAPIIO.instance.getProtection(iSBN);
 		this.onlineFilePath = WebAPIIO.instance.getOnlineFilePath(iSBN);
 	};
 
 	/**
-	 * This downloads the cover image for the book, and saves it in /temp/ folder if isTemporary is true, and in /covers/ if it is not. 
+	 * This downloads the cover image for the book, and saves it in /temp/
+	 * folder if isTemporary is true, and in /covers/ if it is not.
+	 * 
 	 * @param isTemporary
+	 * @throws IOException 
 	 */
-	public void downloadImage(boolean isTemporary) {
+	public void downloadImage(boolean isTemporary) throws IOException {
 		URL url = new URL(onlineImagePath);
-		InputStream is = url.openStream();
+		InputStream is;
+		is = url.openStream();
+
 		if (isTemporary) {
 			this.localImagePath = "/temp/" + this.iSBN + ".jpg";
 		} else {
@@ -106,30 +113,50 @@ public class Book {
 	}
 
 	/**
-	 * @return Protection
+	 * @return Protection public Protection getProtection() { return
+	 *         this.protection; }
 	 */
-	public Protection getProtection() {
-		return this.protection;
-	}
 
 	/**
 	 * @param url
+	 * @throws IOException
 	 */
-	public void downloadBook() {
+	public void downloadBook() throws IOException {
 		URL url = new URL(onlineFilePath);
 		InputStream is = url.openStream();
 		this.localFilePath = "/books/" + this.format.toString() + this.iSBN
-									   + "." + this.format.getExtension();
-		OutputStream os = new FileOutputStream(this.localImagePath);
+				+ "." + this.format.getExtension();
+		OutputStream os = null;
+		try {
+			os = new FileOutputStream(this.localImagePath);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		byte[] b = new byte[2048];
 		int length;
 
-		while ((length = is.read(b)) != -1) {
-			os.write(b, 0, length);
+		try {
+			while ((length = is.read(b)) != -1) {
+				os.write(b, 0, length);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		is.close();
-		os.close();
+		try {
+			is.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			os.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
