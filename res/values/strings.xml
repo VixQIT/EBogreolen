@@ -1,5 +1,7 @@
 <resources>
 
     <string name="app_name">eBogreolen</string>
+    <string name="logo">logo</string>
+    <string name="menu_settings">Menu settings</string>
 
 </resources>

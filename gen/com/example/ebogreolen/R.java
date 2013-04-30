@@ -23,9 +23,10 @@ public final class R {
     public static final class id {
         public static final int bookTable=0x7f070002;
         public static final int bookView=0x7f070001;
-        public static final int listview_background_shape=0x7f070006;
+        public static final int button1=0x7f070006;
+        public static final int listview_background_shape=0x7f070007;
         public static final int logo=0x7f070000;
-        public static final int menu_settings=0x7f070007;
+        public static final int menu_settings=0x7f070008;
         public static final int tableRow1=0x7f070003;
         public static final int tableRow2=0x7f070004;
         public static final int tableRow3=0x7f070005;
@@ -38,8 +39,7 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f040000;
-        public static final int hello_world=0x7f040001;
-        public static final int logo=0x7f040003;
+        public static final int logo=0x7f040001;
         public static final int menu_settings=0x7f040002;
     }
     public static final class style {
