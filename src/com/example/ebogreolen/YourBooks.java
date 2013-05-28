@@ -28,7 +28,7 @@ public class YourBooks extends Activity {
         	rows.add(row);
         }
         
-        
+       
         int width = (int) (80 * scale + 0.5f);
         int margins = (int) (5 * scale + 0.5f);
         for (TableRow row : rows) {
