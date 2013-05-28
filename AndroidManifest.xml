@@ -25,7 +25,8 @@
         </activity>
         <activity
             android:name="com.example.ebogreolen.SearchActivity"
-            android:label="@string/title_activity_search" >
+            android:label="@string/title_activity_search"
+            android:screenOrientation="portrait"  >
 		</activity>
         <activity
             android:name="com.example.ebogreolen.Results"
