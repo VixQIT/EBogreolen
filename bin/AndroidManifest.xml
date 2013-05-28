@@ -24,6 +24,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.ebogreolen.SearchActivity"
+            android:label="@string/title_activity_search" >
+		</activity>
+        <activity
             android:name="com.example.ebogreolen.Results"
             android:label="@string/title_activity_results" >
         </activity>
