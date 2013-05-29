@@ -39,8 +39,9 @@ public class YourBooks extends Activity {
 				LayoutParams.MATCH_PARENT);
 		lp.setMargins(margins, 1, margins, 1);
 		for (TableRow row : rows) {
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < 10; i++) {
 				ImageView book = new ImageView(this);
+				this.addListenerOnView(book);
 				book.setLayoutParams(lp);
 				book.setImageResource(R.drawable.testcover);
 				row.addView(book);
@@ -56,6 +57,21 @@ public class YourBooks extends Activity {
 		Button button = (Button) findViewById(R.id.button1);
  
 		button.setOnClickListener(new OnClickListener() {
+ 
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(YourBooks.this, Results.class);
+				startActivity(intent);
+ 
+			}
+		}
+		);
+	
+	}
+
+	public void addListenerOnView(View view) {
+   	 
+		view.setOnClickListener(new OnClickListener() {
  
 			@Override
 			public void onClick(View arg0) {
