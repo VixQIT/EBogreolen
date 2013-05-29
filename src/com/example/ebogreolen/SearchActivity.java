@@ -3,38 +3,48 @@ package com.example.ebogreolen;
 import java.util.ArrayList;
 
 import com.example.ebogreolen.Adapter.*;
-import com.example.ebogreolen.*;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
 
 public class SearchActivity extends Activity {
     /** Called when the activity is first created. */
     private ExpandListAdapter ExpAdapter;
     private ArrayList<ExpandListGroup> ExpListItems;
     private ExpandableListView ExpandList;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_search);
+
         ExpandList = (ExpandableListView) findViewById(R.id.ExpList);
         ExpListItems = SetStandardGroups();
         ExpAdapter = new ExpandListAdapter(SearchActivity.this, ExpListItems);
         ExpandList.setAdapter(ExpAdapter);
+
+        ExpandList.setOnChildClickListener(new OnChildClickListener()
+
+        {
+
+            @Override
+            public boolean onChildClick(ExpandableListView Parent, View v,
+                    int groupPosition, int childPosition, long id) {
+                Intent intent = new Intent(SearchActivity.this, YourBooks.class);
+                startActivity(intent);;
+                return false;
+            }
+        });
     }
-    
+
     public ArrayList<ExpandListGroup> SetStandardGroups() {
         ArrayList<ExpandListGroup> list = new ArrayList<ExpandListGroup>();
         ArrayList<ExpandListChild> list2 = new ArrayList<ExpandListChild>();
-        ArrayList<ExpandListChild> list3 = new ArrayList<ExpandListChild>();
-        ArrayList<ExpandListChild> list4 = new ArrayList<ExpandListChild>();
-        ArrayList<ExpandListChild> list5 = new ArrayList<ExpandListChild>();
-        ArrayList<ExpandListChild> list6 = new ArrayList<ExpandListChild>();
-        ArrayList<ExpandListChild> list7 = new ArrayList<ExpandListChild>();
-        ArrayList<ExpandListChild> list8 = new ArrayList<ExpandListChild>();
-        ArrayList<ExpandListChild> list9 = new ArrayList<ExpandListChild>();
-        ArrayList<ExpandListChild> list10 = new ArrayList<ExpandListChild>();
 
         ExpandListGroup gru1 = new ExpandListGroup();
         gru1.setName("Skønlitteratur");
@@ -72,7 +82,7 @@ public class SearchActivity extends Activity {
         list2.add(ch1_8);
         gru1.setItems(list2);
         list2 = new ArrayList<ExpandListChild>();
-        
+
         ExpandListGroup gru2 = new ExpandListGroup();
         gru2.setName("Studie og erhverv");
         ExpandListChild ch2_1 = new ExpandListChild();
@@ -122,7 +132,6 @@ public class SearchActivity extends Activity {
         gru2.setItems(list2);
         list2 = new ArrayList<ExpandListChild>();
 
-        
         ExpandListGroup gru3 = new ExpandListGroup();
         gru3.setName("Krop og Sjæl");
         ExpandListChild ch3_1 = new ExpandListChild();
@@ -143,7 +152,7 @@ public class SearchActivity extends Activity {
         list2.add(ch3_4);
         gru3.setItems(list2);
         list2 = new ArrayList<ExpandListChild>();
-        
+
         ExpandListGroup gru4 = new ExpandListGroup();
         gru4.setName("Børn og unge");
         ExpandListChild ch4_1 = new ExpandListChild();
@@ -160,7 +169,7 @@ public class SearchActivity extends Activity {
         list2.add(ch4_3);
         gru4.setItems(list2);
         list2 = new ArrayList<ExpandListChild>();
-        
+
         ExpandListGroup gru5 = new ExpandListGroup();
         gru5.setName("Madog vin");
         ExpandListChild ch5_1 = new ExpandListChild();
@@ -186,7 +195,7 @@ public class SearchActivity extends Activity {
         list2.add(ch5_5);
         gru5.setItems(list2);
         list2 = new ArrayList<ExpandListChild>();
-        
+
         ExpandListGroup gru6 = new ExpandListGroup();
         gru6.setName("Hus, Have, Dyr og Natur");
         ExpandListChild ch6_1 = new ExpandListChild();
@@ -207,15 +216,16 @@ public class SearchActivity extends Activity {
         list2.add(ch6_4);
         gru6.setItems(list2);
         list2 = new ArrayList<ExpandListChild>();
-        
+
         list.add(gru1);
         list.add(gru2);
         list.add(gru3);
         list.add(gru4);
         list.add(gru5);
         list.add(gru6);
-                
+
         return list;
+
     }
 
 }

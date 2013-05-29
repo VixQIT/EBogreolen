@@ -7,9 +7,10 @@
     <string name="title_activity_search">SearchActivity</string>
     <color name="Black">#000000</color>
     <color name="ExpandChildBackground">#FFFEE3</color>
-    <color name="ExpandGroupBackground">#CDC673</color>
+    <color name="ExpandGroupBackground">#E2C8A8</color>
     <string name="title_activity_results">Results</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="NameDefault">Search for books</string>
+    
 </resources>
