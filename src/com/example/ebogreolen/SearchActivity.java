@@ -35,7 +35,7 @@ public class SearchActivity extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView Parent, View v,
                     int groupPosition, int childPosition, long id) {
-                Intent intent = new Intent(SearchActivity.this, YourBooks.class);
+                Intent intent = new Intent(SearchActivity.this, Results.class);
                 startActivity(intent);;
                 return false;
             }
