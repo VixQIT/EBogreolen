@@ -99,7 +99,7 @@ public class Results extends Activity {
  
 			@Override
 			public void onClick(View arg0) {
-				Intent intent = new Intent(Results.this, YourBooks.class);
+				Intent intent = new Intent(Results.this, SpecificBook.class);
 				startActivity(intent);
  
 			}

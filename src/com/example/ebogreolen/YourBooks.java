@@ -76,7 +76,7 @@ public class YourBooks extends Activity {
  
 			@Override
 			public void onClick(View arg0) {
-				Intent intent = new Intent(YourBooks.this, Results.class);
+				Intent intent = new Intent(YourBooks.this, SpecificBook.class);
 
 				startActivity(intent);
  
