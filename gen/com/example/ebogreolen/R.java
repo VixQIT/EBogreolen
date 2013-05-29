@@ -32,9 +32,10 @@ public final class R {
         public static final int border=0x7f020003;
         public static final int customcorners=0x7f020004;
         public static final int ic_launcher=0x7f020005;
-        public static final int store_logo=0x7f020006;
-        public static final int testcover=0x7f020007;
-        public static final int testcover2=0x7f020008;
+        public static final int resultcorners=0x7f020006;
+        public static final int store_logo=0x7f020007;
+        public static final int testcover=0x7f020008;
+        public static final int testcover2=0x7f020009;
     }
     public static final class id {
         public static final int ExpList=0x7f090003;
@@ -62,22 +63,23 @@ public final class R {
         public static final int expandlist_group_item=0x7f030005;
     }
     public static final class menu {
-        public static final int activity_your_books=0x7f080000;
-        public static final int results=0x7f080001;
-        public static final int search=0x7f080002;
-        public static final int specific__book=0x7f080003;
-        public static final int specific_book=0x7f080004;
+        public static final int activity_results=0x7f080000;
+        public static final int activity_your_books=0x7f080001;
+        public static final int results=0x7f080002;
+        public static final int search=0x7f080003;
+        public static final int specific__book=0x7f080004;
+        public static final int specific_book=0x7f080005;
     }
     public static final class string {
-        public static final int action_settings=0x7f050005;
+        public static final int NameDefault=0x7f050008;
+        public static final int action_settings=0x7f050006;
         public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050006;
+        public static final int hello_world=0x7f050007;
         public static final int logo=0x7f050001;
         public static final int menu_settings=0x7f050002;
-        public static final int title_activity_results=0x7f050004;
+        public static final int title_activity_results=0x7f050005;
         public static final int title_activity_search=0x7f050003;
-        public static final int title_activity_specific__book=0x7f050007;
-        public static final int title_activity_specific_book=0x7f050008;
+        public static final int title_activity_specific_book=0x7f050004;
     }
     public static final class style {
         /** 
