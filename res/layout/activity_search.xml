@@ -14,10 +14,11 @@
     
 	<ExpandableListView
                 android:id="@+id/ExpList"
+                android:background="@drawable/customcorners"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:groupIndicator="@null"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="9dp" />
 </LinearLayout>
