@@ -171,7 +171,7 @@ public class SearchActivity extends Activity {
         list2 = new ArrayList<ExpandListChild>();
 
         ExpandListGroup gru5 = new ExpandListGroup();
-        gru5.setName("Madog vin");
+        gru5.setName("Mad og vin");
         ExpandListChild ch5_1 = new ExpandListChild();
         ch5_1.setName("Alle");
         ch5_1.setTag(null);
