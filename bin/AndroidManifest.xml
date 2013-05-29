@@ -28,10 +28,15 @@
             android:label="@string/title_activity_search"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" >
-		</activity>
+        </activity>
         <activity
             android:name="com.example.ebogreolen.Results"
             android:label="@string/title_activity_results"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.ebogreolen.SpecificBook"
+            android:label="@string/title_activity_specific_book"
             android:screenOrientation="portrait" >
         </activity>
     </application>
