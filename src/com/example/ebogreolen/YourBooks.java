@@ -1,7 +1,7 @@
 package com.example.ebogreolen;
 
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,12 +35,12 @@ public class YourBooks extends Activity {
 
 		int width = (int) (80 * scale + 0.5f);
 		int margins = (int) (5 * scale + 0.5f);
+		TableRow.LayoutParams lp = new TableRow.LayoutParams(width,
+				LayoutParams.MATCH_PARENT);
+		lp.setMargins(margins, 1, margins, 1);
 		for (TableRow row : rows) {
 			for (int i = 0; i < 100; i++) {
 				ImageView book = new ImageView(this);
-				TableRow.LayoutParams lp = new TableRow.LayoutParams(width,
-						LayoutParams.MATCH_PARENT);
-				lp.setMargins(margins, 1, margins, 1);
 				book.setLayoutParams(lp);
 				book.setImageResource(R.drawable.testcover);
 				row.addView(book);
