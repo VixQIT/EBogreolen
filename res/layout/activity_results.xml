@@ -5,68 +5,19 @@
     android:background="@drawable/backrepeat"
     android:orientation="vertical"
     tools:context=".Results" >
-    
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
 
-    <ImageView
-        android:contentDescription="@string/logo"
-        android:id="@+id/logo"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10"
-        android:src="@drawable/store_logo" />
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        <TableLayout
+            android:id="@+id/bookResults"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0" >
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:src="@drawable/border" />
-    
-	<HorizontalScrollView
-	    android:id="@+id/bookView"
-	    android:background="@drawable/bookbox"
-	    android:layout_width="fill_parent"
-	    android:layout_height="0dp"
-	    android:orientation="horizontal"
-        android:layout_weight="77.4" >
-
-		<TableLayout
-		    android:id="@+id/bookTable"
-		    android:layout_width="0dp"
-		    android:layout_height="match_parent" 
-		    android:layout_marginLeft="5dp"
-		    android:layout_marginRight="5dp">
-		</TableLayout>
-		
-	</HorizontalScrollView>
-
-    <ImageView
-       android:layout_width="fill_parent"
-       android:layout_height="0dp"
-       android:layout_weight="0.3"
-       android:src="@drawable/border" />
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10" >
-
-	    <Button
-	        android:id="@+id/button1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentTop="true"
-	        android:layout_centerHorizontal="true"
-	        android:text="Buy more books" />
-
-    </RelativeLayout>
+        </TableLayout>
+    </ScrollView>
 
 </LinearLayout>
